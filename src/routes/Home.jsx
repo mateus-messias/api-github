@@ -21,23 +21,25 @@ export const Home = () => {
         setError(true)
     }
 
-    const {avatar_url, login, location, followers, following, html_url} = data
+    const {avatar_url, name, login, location, followers, following, html_url, repos_url} = data
     const userData = {
         avatar_url,
+        name,
         login, 
         location, 
         followers, 
         following,
-        html_url
+        html_url,
+        repos_url
     }
     setUser(userData)
   }
+  
   return (
     <div className='home-container'>
-        <h2 className='title'>Github Users</h2>
-        <Search loadUser={loadUser}/>
-        {!error && user && <User {...user}/>}
-        {error && <Error/>}
+      <Search loadUser={loadUser}/>
+      {!error &&  <User {...user}/>}
+      {error && <Error/>}      
     </div>
   )
 }

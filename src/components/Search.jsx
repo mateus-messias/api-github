@@ -8,28 +8,27 @@ export const Search = ({loadUser}) => {
 
   const handleKeyDown = (e) => {
     if(e.key === 'Enter'){
-        loadUser(userName)
+      loadUser(userName)
     }
   }
 
   return (
     <div className='search-container'>
-        <h2>Busque por um Usuario</h2>
-        <div className='input-container'>
-            <input 
-                type="text" 
-                className='seach-input'
-                placeholder='Digite o nome do usuario' 
-                onChange={(e) => setUserName(e.target.value)}
-                onKeyDown={handleKeyDown}
-            />
-            <button 
-                className='search-btn'
-                onClick={() => loadUser(userName)}
-            >
-                <FaSearch/>
-            </button>
-        </div>
+      <div className='input-container'>
+        <input 
+          type="text" 
+          className='seach-input'
+          placeholder='Digite o nome do usuario' 
+          onChange={(e) => setUserName(e.target.value)}
+          onKeyDown={handleKeyDown}
+        />
+        <button 
+          className='search-btn'
+          onClick={() => loadUser(userName)}
+        >
+          <FaSearch/>
+        </button>
+      </div>
     </div>
   )
 }

@@ -1,0 +1,76 @@
+.repo-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.repo-title{
+    /* width: 75vw; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 1rem 0 ;
+}
+.repo-card{
+    width: 23.5rem;
+    height: 15rem;
+    background-color: #010409;
+    padding: 1.3rem;
+    gap: 5;   
+    box-sizing: border-box;
+    border-radius: .5rem;
+    border-left: solid 4px #5d55fa;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: hidden;
+}
+.repo-card h2{
+    margin-bottom: 2rem;
+}
+.repo-card h4{
+    margin-bottom: 2rem;
+}
+.repo-card div{
+    display: flex;
+    justify-content: flex-end;
+}
+.repo-card a{    
+    border: none;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-weight: bold ;
+    font-size: 1.5rem;
+    cursor: pointer;
+    letter-spacing: 2.5px;
+    color: #5d55fa;
+    padding: .5rem;
+    transition: .3s;
+}
+.repo-card a:hover{
+    color: #423cb0;
+}
+
+
+@media screen and (min-width: 700px){
+    .repo-container{
+        width: 75vw;
+        height: 100%;
+        margin-left: 29.5rem;   
+        margin-top: 3%;   
+        align-items: flex-start;  
+    }
+    .repo-title{
+        justify-content: flex-start;
+    }
+    .repos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }    
+}
+
+@media screen and (min-width: 1450px) {
+    .repos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
